@@ -218,46 +218,43 @@ const Index = () => {
 
         {/* Финальное сообщение */}
         {currentStep === 'final' && !isTransitioning && (
-          <Card className="p-6 sm:p-8 shadow-romantic bg-card/90 backdrop-blur-sm animate-scale-bounce text-center border-2 border-primary/30">
-            <div className="space-y-6">
-              <div className="flex justify-center mb-6 relative">
-                <div className="absolute inset-0 bg-primary/20 rounded-full animate-glow"></div>
-                <Calendar className="text-primary animate-pulse-soft relative z-10" size={48} />
+          <Card className="p-6 sm:p-8 shadow-romantic bg-card/90 backdrop-blur-sm animate-scale-bounce text-center border-2 border-primary/30 max-w-2xl mx-auto">
+            <div className="space-y-8">
+              <div className="flex justify-center mb-6">
+                <Calendar className="text-primary animate-pulse-soft" size={64} />
               </div>
               
-              <div className="text-lg sm:text-xl md:text-2xl font-medium text-foreground leading-relaxed space-y-6">
-                <div className="animate-slide-in-left flex items-center justify-center flex-wrap gap-2">
-                  <Calendar className="text-primary animate-bounce-gentle" size={24} />
-                  <span className="text-2xl">📅</span>
-                  <strong className="text-primary">12.06.2026</strong> 
-                  <span>– я должен приехать в</span>
-                  <MapPin className="text-primary animate-float" size={20} />
-                  <span className="text-primary font-semibold">Новороссийск</span>
-                  <span>на 4 дня</span>
-                  <span className="text-2xl">🌊</span>
+              <div className="space-y-6">
+                {/* Дата - главный акцент */}
+                <div className="bg-gradient-romantic p-6 rounded-2xl animate-glow">
+                  <div className="text-white text-center space-y-2">
+                    <p className="text-lg font-medium">📅 Важная дата:</p>
+                    <p className="text-4xl sm:text-5xl font-bold animate-bounce-gentle">
+                      12.06.2026
+                    </p>
+                    <div className="flex items-center justify-center gap-3 mt-4">
+                      <MapPin className="text-white animate-float" size={24} />
+                      <p className="text-xl font-semibold">Новороссийск</p>
+                      <span className="text-2xl">🌊</span>
+                    </div>
+                    <p className="text-lg">на 4 дня</p>
+                  </div>
                 </div>
                 
-                <div className="pt-6 animate-slide-in-right" style={{ animationDelay: '1s' }}>
-                  <p className="text-xl sm:text-2xl md:text-3xl font-bold text-primary animate-glow flex items-center justify-center flex-wrap gap-2">
-                    <Gift className="animate-rotate-gentle" size={28} />
+                {/* Финальное сообщение */}
+                <div className="pt-4">
+                  <p className="text-2xl sm:text-3xl font-bold text-primary animate-pulse-soft flex items-center justify-center gap-2">
                     <span className="text-3xl">🎊</span>
                     Вот и все, секрет раскрыт
                     <span className="text-3xl">🎊</span>
-                    <Gift className="animate-rotate-gentle" size={28} style={{ animationDelay: '2s' }} />
                   </p>
                 </div>
               </div>
 
-              <div className="flex justify-center space-x-3 pt-6">
-                <Sparkles className="text-primary animate-float" size={24} />
-                <Heart className="text-primary animate-hearts-float" size={24} />
+              <div className="flex justify-center space-x-3 pt-4">
+                <Heart className="text-primary animate-hearts-float" size={28} />
                 <span className="text-3xl animate-bounce-gentle">💕</span>
-                <Heart className="text-primary animate-hearts-float" size={24} style={{ animationDelay: '1s' }} />
-                <Sparkles className="text-primary animate-float" size={24} style={{ animationDelay: '2s' }} />
-              </div>
-
-              <div className="text-sm text-muted-foreground animate-fade-in-word pt-4" style={{ animationDelay: '2s' }}>
-                <span className="text-lg">🌹</span> Создано с любовью для Евы <span className="text-lg">🌹</span>
+                <Heart className="text-primary animate-hearts-float" size={28} style={{ animationDelay: '1s' }} />
               </div>
             </div>
           </Card>
