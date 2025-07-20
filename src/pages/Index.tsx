@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Heart, Sparkles, Lock, Gift, Calendar, MapPin, Smile, Star, Users, Shield, Coffee, Music } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const SECRET_CODE = "123456789";
+const SECRET_CODE = "eva";
 
 const REASONS = [
   { text: "Тепло", icon: Coffee, emoji: "☀️" },
@@ -103,7 +103,7 @@ const Index = () => {
           <div className="fixed inset-0 bg-gradient-romantic opacity-80 flex items-center justify-center z-50">
             <div className="text-center">
               <Sparkles className="text-white animate-rotate-gentle mx-auto mb-4" size={48} />
-              <p className="text-white text-xl font-medium animate-pulse-soft">Загружаем магию... ✨</p>
+              <p className="text-white text-xl font-medium animate-pulse-soft">Загружаю магию... ✨</p>
             </div>
           </div>
         )}
@@ -117,12 +117,12 @@ const Index = () => {
                 <Lock className="text-primary animate-bounce-gentle relative z-10" size={48} />
               </div>
               <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 animate-slide-in-left">
-                🔐 Введите секретный код для Евы
+                🔐 Введи секретный код
               </h1>
               <div className="space-y-6">
                 <Input
                   type="text"
-                  placeholder="🔢 Введите код..."
+                  placeholder="🔢 Введи код..."
                   value={code}
                   onChange={(e) => setCode(e.target.value)}
                   className="text-center text-lg sm:text-xl tracking-widest h-14 text-primary font-semibold border-2 border-primary/30 focus:border-primary transition-all duration-300"
@@ -209,7 +209,7 @@ const Index = () => {
                   className="bg-gradient-romantic hover:shadow-romantic transition-all duration-300 h-12 px-8 text-lg font-semibold"
                   size="lg"
                 >
-                  🎁 Далее 🎁
+                  🔥 Далее 🔥
                 </Button>
               </div>
             )}
